@@ -20,8 +20,14 @@ function settingsPage() {
     '</div>'
 
     //вывод домена в строке "Введите адрес сайта"
-    var domLocYuor = document.getElementById('yourDomainId');
-    domLocYuor.value = localStorage["yourDomain"];
+    //проверка localStorage чтобы undefined не выводилось в данной строке
+    if (localStorage["yourDomain"] == undefined) {
+        var domLocYuor = document.getElementById('yourDomainId');
+        domLocYuor.value = "Введите адрес сайта";
+    } else {
+        var domLocYuor = document.getElementById('yourDomainId');
+        domLocYuor.value = localStorage["yourDomain"];
+    }
 };
 
 //сохраним название домена для подключения
@@ -30,38 +36,3 @@ function yourDomain() {
     var locYourDomain = document.getElementById('yourDomainId').value;
     localStorage["yourDomain"] = locYourDomain;
 }
-
-/* //сохраним название домена для подключения
-function yourDomain() {
-    var postBody = document.getElementById('content-body');//получаем в переменную контент из консоли
-    
-    //переменная для записи домена
-    var locYourDomain = document.getElementById('yourDomainId').value;
-    
-    localStorage["yourDomain"] = locYourDomain;
-    var appUrl = localStorage["yourDomain"];
-    postBody.innerHTML = '';//очищаем от текста
-
-    // Получим категории/рубрики
-    fetch(  apiURL + '/wp/v2/categories/' )
-    .then( response => {
-        if ( response.status !== 200 ) {
-            throw new Error( 'Problem! Status Code: ' + response.status );
-        }
-        response.json().then( categories => {
-            var stepInner;//будет выводится строка с категорией
-            var categoriesLength = categories.length;//подсчет категрий
-                // 
-                stepInner = 'Количество категорий:' + " " + '<span>' + categoriesLength + '</span>' + '<br>';
-                console.log(stepInner);
-                
-                postBody.innerHTML = stepInner;
-            
-        });
-    })
-    .catch(function(err) {
-        postBody.innerHTML = ( 'Error: ', err ) + '<br>';
-        errors();
-    });
-
-} */
