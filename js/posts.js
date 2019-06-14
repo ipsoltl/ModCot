@@ -5,15 +5,9 @@ function postTen() {
     var locPostNumber;//количество выводимых записей
     var locPagePostsNumber;//номер страницы вывода записей
 
-    //запускаем прелоадер
-    /* preloader(); */
-
     //удаляем кнопки пагинации
     var ell=document.getElementById("paginationPosts");
     ell.style.display="none";
-    //выводим кнопки пагинации
-    /* var ell=document.getElementById("paginationPosts");
-    ell.style.display="block"; */
 
     //проверяем в localStorage номер страницы вывода записей
     if (localStorage.getItem("paginatPostsNumber") === null) {
