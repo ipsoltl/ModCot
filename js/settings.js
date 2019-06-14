@@ -23,7 +23,7 @@ function settingsPage() {
     //проверка localStorage чтобы undefined не выводилось в данной строке
     if (localStorage["yourDomain"] == undefined) {
         var domLocYuor = document.getElementById('yourDomainId');
-        domLocYuor.value = "Введите адрес сайта";
+        domLocYuor.placeholder = "https://yourdomain.net";
     } else {
         var domLocYuor = document.getElementById('yourDomainId');
         domLocYuor.value = localStorage["yourDomain"];
