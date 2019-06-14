@@ -3,7 +3,7 @@ function settingsPage() {
     postBody.innerHTML = '';//очищаем от текста
 
     postBody.innerHTML =
-    '<div class="input-group input-group-sm mb-3"><div class="input-group-prepend"><span class="input-group-text" id="inputGroup-sizing-sm">Введите адрес сайта</span></div><input type="text" placeholder="https://yourdomain.net" id="yourDomainId" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"><button type="button" class="btn btn-sm btn-outline-secondary" onclick="yourDomain()" title="Сохранить">Сохранить</button></div>' + 
+    '<div class="input-group input-group-sm mb-3 col-sm-7"><div class="input-group-prepend"><span class="input-group-text" id="inputGroup-sizing-sm">Введите адрес сайта</span></div><input type="text" placeholder="https://yourdomain.net" id="yourDomainId" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"><button type="button" class="btn btn-sm btn-outline-secondary" onclick="yourDomain()" title="Сохранить">Сохранить</button></div>' + 
     'Ниже идут переключатели' +
     '<div class="custom-control custom-switch">' +
     '<input type="checkbox" class="custom-control-input" id="customSwitch1">' +
