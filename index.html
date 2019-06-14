@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	 <link href="dashboard.css" rel="stylesheet">
+	<title>ModCot</title>
+</head>
+<body>
+	<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+		<h3 class="navbar col-sm-3 col-md-2 mr-0">ModCot</h3>
+		<input class="form-control form-control-dark w-100" id="searchId" type="text" placeholder="Поиск" aria-label="Search">
+		<ul class="navbar-nav px-3">
+		  <!-- <li class="nav-item text-nowrap"> -->
+			<!-- <a class="nav-link" href="#" title="Не работает">Sign out</a> -->
+			<button type="button" class="btn btn-sm btn-outline-secondary" onclick="searchPosts()" title="Поиск">Поиск</button>
+		  <!-- </li> -->
+		</ul>
+	  </nav>
+	  
+	  <div class="container-fluid">
+		<div class="row">
+		  <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+			<div class="sidebar-sticky">
+			  <ul class="nav flex-column">
+				<li class="nav-item">
+				  <a class="nav-link" href="#" title="10-ть записей" onclick="postTen()">
+					Последние записи
+				  </a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#" title="Все категории" onclick="categoriesAll()">
+					Категории
+				  </a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#" title="Не работает">
+					Products
+				  </a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#" title="Не работает">
+					Customers
+				  </a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#" title="Не работает">
+					Reports
+				  </a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#" title="Не работает">
+					Integrations
+				  </a>
+				</li>
+			  </ul>
+	  
+			  <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+				<span>Сохранить параменты</span>
+				<a class="d-flex align-items-center text-muted" href="#">
+				  <span data-feather="plus-circle"></span>
+				</a>
+			  </h6>
+			  <ul class="nav flex-column mb-2">
+				<li class="nav-item">
+				  <a class="nav-link" href="#" onclick="settingsPage()" title="Не работает">
+					<span data-feather="file-text"></span>
+					Настройки
+				  </a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#" title="Не работает">
+					<span data-feather="file-text"></span>
+					Last quarter
+				  </a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#" title="Не работает">
+					<span data-feather="file-text"></span>
+					Social engagement
+				  </a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#" title="Не работает">
+					<span data-feather="file-text"></span>
+					Year-end sale
+				  </a>
+				</li>
+			  </ul>
+			</div>
+		  </nav>
+	  
+		<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+					<h2 class="h3">Консоль</h2>
+					<div class="btn-toolbar mb-2 mb-md-0">
+					<div class="btn-group mr-2">
+						<button type="button" class="btn btn-sm btn-outline-secondary" title="Не работает">Кол-во записей</button>
+						<button type="button" class="btn btn-sm btn-outline-secondary" title="Не работает">Share</button>
+						<button type="button" class="btn btn-sm btn-outline-secondary" title="Не работает">Export</button>
+					</div>
+					<button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle" title="Не работает">
+						<span data-feather="calendar"></span>
+						This week
+					</button>
+					</div>
+				</div>
+				<div id="content-body">
+						Первоначальная страница SPA. <br>
+						В начале стоит проверить ваши настройки.
+				</div><!-- content-body -->
+
+				<div class="paginationPosts" id="paginationPosts">
+						<button type="button" id="paginatPostsForward" class="btn btn-sm btn-outline-secondary" onclick="pagPostsForward()" title="Вперед">Вперед</button>
+						<button type="button" id="paginatPostsNumber" class="btn btn-sm btn-outline-secondary" title="Не работает">Номер страницы</button>
+						<button type="button" id="paginatPostsNext" class="btn btn-sm btn-outline-secondary" onclick="pagPostsNext()" title="Далее">Далее</button>
+				</div><!-- paginationPosts -->
+
+			</main>
+		</div><!-- row -->
+	  </div><!-- container-fluid -->
+</body>
+<script src="script.js"></script>
+<script src="js/categories.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/module.js"></script>
+</html>
